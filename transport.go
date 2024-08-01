@@ -26,6 +26,7 @@ import (
 	"net/url"
 	"os"
 	"reflect"
+	"runtime/debug"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -2051,7 +2052,10 @@ var errCallerOwnsConn = errors.New("read loop ending; caller owns writable under
 func (pc *persistConn) readLoop() {
 	closeErr := errReadLoopExiting // default value, if not changed below
 	defer func() {
-		recover()
+		if recover() != nil {
+			log.Print(string(debug.Stack()))
+			return
+		}
 
 		pc.close(closeErr)
 		pc.t.removeIdleConn(pc)
@@ -2385,7 +2389,10 @@ type nothingWrittenError struct {
 
 func (pc *persistConn) writeLoop() {
 	defer func() {
-		recover()
+		if recover() != nil {
+			log.Print(string(debug.Stack()))
+			return
+		}
 
 		close(pc.writeLoopDone)
 	}()
