@@ -2051,6 +2051,8 @@ var errCallerOwnsConn = errors.New("read loop ending; caller owns writable under
 func (pc *persistConn) readLoop() {
 	closeErr := errReadLoopExiting // default value, if not changed below
 	defer func() {
+		recover()
+
 		pc.close(closeErr)
 		pc.t.removeIdleConn(pc)
 	}()
@@ -2382,7 +2384,11 @@ type nothingWrittenError struct {
 }
 
 func (pc *persistConn) writeLoop() {
-	defer close(pc.writeLoopDone)
+	defer func() {
+		recover()
+
+		close(pc.writeLoopDone)
+	}()
 	for {
 		select {
 		case wr := <-pc.writech:
