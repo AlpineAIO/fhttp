@@ -26,7 +26,7 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	"github.com/Noooste/fhttp/httptrace"
+	"github.com/AlpineAIO/fhttp/httptrace"
 
 	"golang.org/x/net/idna"
 )

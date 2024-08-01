@@ -47,8 +47,8 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	http "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/http2/hpack"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/http2/hpack"
 
 	"golang.org/x/net/http/httpguts"
 )

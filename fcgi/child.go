@@ -17,8 +17,8 @@ import (
 	"sync"
 	"time"
 
-	http "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/cgi"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/cgi"
 )
 
 // request holds the state for an in-progress request. As soon as it's complete,

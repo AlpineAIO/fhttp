@@ -15,7 +15,7 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	"github.com/Noooste/fhttp/internal/nettrace"
+	"github.com/AlpineAIO/fhttp/internal/nettrace"
 )
 
 // unique type to prevent assignment.

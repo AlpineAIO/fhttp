@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"sync"
 
-	http "github.com/Noooste/fhttp"
+	http "github.com/AlpineAIO/fhttp"
 )
 
 // hello world, the web server

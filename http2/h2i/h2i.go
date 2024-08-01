@@ -38,8 +38,8 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	"github.com/Noooste/fhttp/http2"
-	"github.com/Noooste/fhttp/http2/hpack"
+	"github.com/AlpineAIO/fhttp/http2"
+	"github.com/AlpineAIO/fhttp/http2/hpack"
 	"golang.org/x/term"
 )
 

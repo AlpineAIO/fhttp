@@ -39,12 +39,12 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	. "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/httptest"
-	"github.com/Noooste/fhttp/httptrace"
-	"github.com/Noooste/fhttp/httputil"
-	"github.com/Noooste/fhttp/internal"
-	"github.com/Noooste/fhttp/internal/nettrace"
+	. "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/httptest"
+	"github.com/AlpineAIO/fhttp/httptrace"
+	"github.com/AlpineAIO/fhttp/httputil"
+	"github.com/AlpineAIO/fhttp/internal"
+	"github.com/AlpineAIO/fhttp/internal/nettrace"
 
 	"golang.org/x/net/http/httpguts"
 )

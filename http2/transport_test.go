@@ -33,10 +33,10 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	http "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/http2/hpack"
-	"github.com/Noooste/fhttp/httptest"
-	"github.com/Noooste/fhttp/httptrace"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/http2/hpack"
+	"github.com/AlpineAIO/fhttp/httptest"
+	"github.com/AlpineAIO/fhttp/httptrace"
 )
 
 var (

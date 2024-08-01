@@ -1,4 +1,4 @@
-module github.com/Noooste/fhttp
+module github.com/AlpineAIO/fhttp
 
 go 1.20
 

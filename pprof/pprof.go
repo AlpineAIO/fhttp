@@ -74,8 +74,8 @@ import (
 	"strings"
 	"time"
 
-	http "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/internal/profile"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/internal/profile"
 )
 
 func init() {

@@ -13,7 +13,7 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	http "github.com/Noooste/fhttp"
+	http "github.com/AlpineAIO/fhttp"
 )
 
 func TestNewRequest(t *testing.T) {

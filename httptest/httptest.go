@@ -13,7 +13,7 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	http "github.com/Noooste/fhttp"
+	http "github.com/AlpineAIO/fhttp"
 )
 
 // NewRequest returns a new incoming server Request, suitable

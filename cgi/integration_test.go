@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	http "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/httptest"
-	"github.com/Noooste/fhttp/internal/testenv"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/httptest"
+	"github.com/AlpineAIO/fhttp/internal/testenv"
 )
 
 // This test is a CGI host (testing host.go) that runs its own binary

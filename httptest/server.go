@@ -19,8 +19,8 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	http "github.com/Noooste/fhttp"
-	"github.com/Noooste/fhttp/internal"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/internal"
 )
 
 // A Server is an HTTP server listening on a system-chosen port on the

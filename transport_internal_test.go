@@ -18,7 +18,7 @@ import (
 
 	tls "github.com/Noooste/utls"
 
-	"github.com/Noooste/fhttp/internal"
+	"github.com/AlpineAIO/fhttp/internal"
 )
 
 // Issue 15446: incorrect wrapping of errors when server closes an idle connection.
