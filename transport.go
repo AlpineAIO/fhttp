@@ -32,9 +32,9 @@ import (
 	"time"
 
 	"github.com/andybalholm/brotli"
-	tls "github.com/refraction-networking/utls"
+	tls "github.com/bogdanfinn/utls"
 
-	"github.com/saucesteals/fhttp/httptrace"
+	"github.com/AlpineAIO/fhttp/httptrace"
 
 	"golang.org/x/net/http/httpguts"
 	"golang.org/x/net/http/httpproxy"
@@ -1523,12 +1523,12 @@ func (pconn *persistConn) addTLS(name string, trace *httptrace.ClientTrace) erro
 	var tlsConn *tls.UConn
 
 	if pconn.t.GetTlsClientHelloSpec != nil {
-		tlsConn = tls.UClient(plainConn, cfg, tls.HelloCustom)
+		tlsConn = tls.UClient(plainConn, cfg, tls.HelloCustom, false, false)
 		if err := tlsConn.ApplyPreset(pconn.t.GetTlsClientHelloSpec()); err != nil {
 			return err
 		}
 	} else {
-		tlsConn = tls.UClient(plainConn, cfg, tls.HelloGolang)
+		tlsConn = tls.UClient(plainConn, cfg, tls.HelloGolang, false, false)
 	}
 
 	errc := make(chan error, 2)

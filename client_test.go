@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
-	tls "github.com/refraction-networking/utls"
+	tls "github.com/bogdanfinn/utls"
 
-	. "github.com/saucesteals/fhttp"
-	"github.com/saucesteals/fhttp/cookiejar"
-	"github.com/saucesteals/fhttp/httptest"
+	. "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/cookiejar"
+	"github.com/AlpineAIO/fhttp/httptest"
 )
 
 var robotsTxtHandler = HandlerFunc(func(w ResponseWriter, r *Request) {

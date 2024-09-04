@@ -13,13 +13,13 @@ import (
 	"strings"
 	"testing"
 
-	tls "github.com/refraction-networking/utls"
-	"github.com/saucesteals/fhttp/cookiejar"
-	"github.com/saucesteals/fhttp/httptest"
+	"github.com/AlpineAIO/fhttp/cookiejar"
+	"github.com/AlpineAIO/fhttp/httptest"
+	tls "github.com/bogdanfinn/utls"
 	"golang.org/x/net/publicsuffix"
 
-	http "github.com/saucesteals/fhttp"
-	"github.com/saucesteals/fhttp/http2"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/http2"
 )
 
 // Tests if connection settings are written correctly

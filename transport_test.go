@@ -37,14 +37,14 @@ import (
 	"testing/iotest"
 	"time"
 
-	tls "github.com/refraction-networking/utls"
+	tls "github.com/bogdanfinn/utls"
 
-	. "github.com/saucesteals/fhttp"
-	"github.com/saucesteals/fhttp/httptest"
-	"github.com/saucesteals/fhttp/httptrace"
-	"github.com/saucesteals/fhttp/httputil"
-	"github.com/saucesteals/fhttp/internal"
-	"github.com/saucesteals/fhttp/internal/nettrace"
+	. "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/httptest"
+	"github.com/AlpineAIO/fhttp/httptrace"
+	"github.com/AlpineAIO/fhttp/httputil"
+	"github.com/AlpineAIO/fhttp/internal"
+	"github.com/AlpineAIO/fhttp/internal/nettrace"
 
 	"golang.org/x/net/http/httpguts"
 )

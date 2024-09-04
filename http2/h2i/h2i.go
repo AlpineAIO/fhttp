@@ -36,10 +36,10 @@ import (
 	"strconv"
 	"strings"
 
-	tls "github.com/refraction-networking/utls"
+	tls "github.com/bogdanfinn/utls"
 
-	"github.com/saucesteals/fhttp/http2"
-	"github.com/saucesteals/fhttp/http2/hpack"
+	"github.com/AlpineAIO/fhttp/http2"
+	"github.com/AlpineAIO/fhttp/http2/hpack"
 	"golang.org/x/term"
 )
 

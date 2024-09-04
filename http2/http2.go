@@ -25,9 +25,9 @@ import (
 	"strings"
 	"sync"
 
-	tls "github.com/refraction-networking/utls"
+	tls "github.com/bogdanfinn/utls"
 
-	http "github.com/saucesteals/fhttp"
+	http "github.com/AlpineAIO/fhttp"
 
 	"golang.org/x/net/http/httpguts"
 )

@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	http "github.com/saucesteals/fhttp"
-	"github.com/saucesteals/fhttp/httptest"
-	"github.com/saucesteals/fhttp/internal/profile"
+	http "github.com/AlpineAIO/fhttp"
+	"github.com/AlpineAIO/fhttp/httptest"
+	"github.com/AlpineAIO/fhttp/internal/profile"
 )
 
 // TestDescriptions checks that the profile names under runtime/pprof package

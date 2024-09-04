@@ -1,10 +1,10 @@
-module github.com/saucesteals/fhttp
+module github.com/AlpineAIO/fhttp
 
 go 1.16
 
 require (
-	github.com/andybalholm/brotli v1.0.4
-	github.com/refraction-networking/utls v1.1.6-0.20221101174805-9c1996abbbba
-	golang.org/x/net v0.1.0
-	golang.org/x/term v0.1.0
+	github.com/andybalholm/brotli v1.0.5
+	github.com/bogdanfinn/utls v1.6.1
+	golang.org/x/net v0.17.0
+	golang.org/x/term v0.13.0
 )
