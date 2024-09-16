@@ -1780,6 +1780,10 @@ func (w persistConnWriter) Write(p []byte) (n int, err error) {
 // the Conn implements io.ReaderFrom, it can take advantage of optimizations
 // such as sendfile.
 func (w persistConnWriter) ReadFrom(r io.Reader) (n int64, err error) {
+	if w.pc == nil || w.pc.conn == nil {
+		return 0, errors.New("persistConnWriter is nil")
+	}
+
 	n, err = io.Copy(w.pc.conn, r)
 	w.pc.nwrite += n
 	return
