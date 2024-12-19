@@ -1468,9 +1468,8 @@ func (t *Transport) decConnsPerHost(key connectMethodKey) {
 	defer t.connsPerHostMu.Unlock()
 	n := t.connsPerHost[key]
 	if n == 0 {
-		// Shouldn't happen, but if it does, the counting is buggy and could
-		// easily lead to a silent deadlock, so report the problem loudly.
-		panic("net/http: internal error: connCount underflow")
+		// Shouldn't happen, but if it does, the counting is buggy
+		return
 	}
 
 	// Can we hand this count to a goroutine still waiting to dial?
