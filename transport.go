@@ -633,7 +633,16 @@ type readTrackingBody struct {
 }
 
 func (r *readTrackingBody) Read(data []byte) (int, error) {
+	if r == nil {
+		return 0, io.EOF
+	}
+
 	r.didRead = true
+
+	if r.ReadCloser == nil {
+		return 0, nil
+	}
+
 	return r.ReadCloser.Read(data)
 }
 
@@ -1781,6 +1790,10 @@ func (w persistConnWriter) Write(p []byte) (n int, err error) {
 func (w persistConnWriter) ReadFrom(r io.Reader) (n int64, err error) {
 	if w.pc == nil || w.pc.conn == nil {
 		return 0, errors.New("persistConnWriter is nil")
+	}
+
+	if r == nil {
+		return 0, nil
 	}
 
 	n, err = io.Copy(w.pc.conn, r)
