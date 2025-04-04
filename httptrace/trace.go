@@ -13,7 +13,7 @@ import (
 	"reflect"
 	"time"
 
-	tls "github.com/bogdanfinn/utls"
+	tls "github.com/AlpineAIO/utls"
 
 	"github.com/AlpineAIO/fhttp/internal/nettrace"
 )

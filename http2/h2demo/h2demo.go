@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	tls "github.com/bogdanfinn/utls"
+	tls "github.com/AlpineAIO/utls"
 
 	"cloud.google.com/go/storage"
 	"github.com/AlpineAIO/fhttp/http2"

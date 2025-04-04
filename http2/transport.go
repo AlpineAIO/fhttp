@@ -27,7 +27,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	tls "github.com/bogdanfinn/utls"
+	tls "github.com/AlpineAIO/utls"
 
 	http "github.com/AlpineAIO/fhttp"
 	"github.com/AlpineAIO/fhttp/httptrace"

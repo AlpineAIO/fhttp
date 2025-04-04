@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	tls "github.com/bogdanfinn/utls"
+	tls "github.com/AlpineAIO/utls"
 
 	. "github.com/AlpineAIO/fhttp"
 	"github.com/AlpineAIO/fhttp/httptest"

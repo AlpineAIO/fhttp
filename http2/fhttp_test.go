@@ -15,7 +15,7 @@ import (
 
 	"github.com/AlpineAIO/fhttp/cookiejar"
 	"github.com/AlpineAIO/fhttp/httptest"
-	tls "github.com/bogdanfinn/utls"
+	tls "github.com/AlpineAIO/utls"
 	"golang.org/x/net/publicsuffix"
 
 	http "github.com/AlpineAIO/fhttp"

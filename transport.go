@@ -31,8 +31,8 @@ import (
 	"sync/atomic"
 	"time"
 
+	tls "github.com/AlpineAIO/utls"
 	"github.com/andybalholm/brotli"
-	tls "github.com/bogdanfinn/utls"
 
 	"github.com/AlpineAIO/fhttp/httptrace"
 
