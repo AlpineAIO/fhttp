@@ -5,7 +5,7 @@ go 1.22.0
 toolchain go1.22.6
 
 require (
-	github.com/AlpineAIO/utls v0.0.0-20250404183303-3817606895d8
+	github.com/AlpineAIO/utls v0.0.0-20250404195422-c3d71bbf16c5
 	github.com/andybalholm/brotli v1.1.1
 	golang.org/x/net v0.31.0
 	golang.org/x/term v0.26.0
