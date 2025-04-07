@@ -36,7 +36,7 @@ import (
 	"strconv"
 	"strings"
 
-	tls "github.com/AlpineAIO/utls"
+	tls "github.com/bogdanfinn/utls"
 
 	"github.com/AlpineAIO/fhttp/http2"
 	"github.com/AlpineAIO/fhttp/http2/hpack"

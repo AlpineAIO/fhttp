@@ -35,7 +35,7 @@ import (
 	"testing"
 	"time"
 
-	tls "github.com/AlpineAIO/utls"
+	tls "github.com/bogdanfinn/utls"
 
 	. "github.com/AlpineAIO/fhttp"
 	"github.com/AlpineAIO/fhttp/httptest"

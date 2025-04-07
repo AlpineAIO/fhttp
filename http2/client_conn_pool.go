@@ -9,7 +9,7 @@ package http2
 import (
 	"sync"
 
-	tls "github.com/AlpineAIO/utls"
+	tls "github.com/bogdanfinn/utls"
 
 	http "github.com/AlpineAIO/fhttp"
 )

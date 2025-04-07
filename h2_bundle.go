@@ -25,7 +25,7 @@ import (
 	"bytes"
 	"context"
 	"crypto/rand"
-	tls "github.com/AlpineAIO/utls"
+	tls "github.com/bogdanfinn/utls"
 	"encoding/binary"
 	"errors"
 	"fmt"

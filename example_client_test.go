@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	tls "github.com/AlpineAIO/utls"
+	tls "github.com/bogdanfinn/utls"
 
 	http "github.com/AlpineAIO/fhttp"
 	"github.com/AlpineAIO/fhttp/http2"
