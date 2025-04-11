@@ -1803,6 +1803,12 @@ func (w persistConnWriter) ReadFrom(r io.Reader) (n int64, err error) {
 		return 0, nil
 	}
 
+	defer func() {
+		if recover() != nil {
+			err = io.EOF
+		}
+	}()
+
 	n, err = io.Copy(w.pc.conn, r)
 	w.pc.nwrite += n
 	return
