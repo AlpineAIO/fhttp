@@ -632,7 +632,7 @@ type readTrackingBody struct {
 	didClose bool
 }
 
-func (r *readTrackingBody) Read(data []byte) (int, error) {
+func (r *readTrackingBody) Read(data []byte) (n int, err error) {
 	if r == nil {
 		return 0, io.EOF
 	}
@@ -642,6 +642,13 @@ func (r *readTrackingBody) Read(data []byte) (int, error) {
 	if r.ReadCloser == nil {
 		return 0, nil
 	}
+
+	defer func() {
+		if recover() != nil {
+			r.didRead = false
+			err = io.EOF
+		}
+	}()
 
 	return r.ReadCloser.Read(data)
 }

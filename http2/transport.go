@@ -1366,6 +1366,8 @@ var (
 	errStopReqBodyWriteAndCancel = errors.New("http2: canceling request")
 
 	errReqBodyTooLong = errors.New("http2: request body larger than specified content length")
+
+	errRequestBodyNil = errors.New("http2: request body is nil")
 )
 
 func (cs *clientStream) writeRequestBody(body io.Reader, bodyCloser io.Closer) (err error) {
@@ -1393,6 +1395,10 @@ func (cs *clientStream) writeRequestBody(body io.Reader, bodyCloser io.Closer) (
 
 	var sawEOF bool
 	for !sawEOF {
+		if body == nil {
+			return errRequestBodyNil
+		}
+
 		n, err := body.Read(buf[:len(buf)-1])
 		if hasContentLen {
 			remainLen -= int64(n)
