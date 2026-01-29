@@ -979,38 +979,27 @@ const maxAllocFrameSize = 512 << 10
 // They're capped at the min of the peer's max frame size or 512KB
 // (kinda arbitrarily), but definitely capped so we don't allocate 4GB
 // bufers.
+var scratchPool = sync.Pool{
+	New: func() any {
+		return make([]byte, maxAllocFrameSize)
+	},
+}
+
 func (cc *ClientConn) frameScratchBuffer() []byte {
 	cc.mu.Lock()
 	size := cc.maxFrameSize
 	if size > maxAllocFrameSize {
 		size = maxAllocFrameSize
 	}
-	for i, buf := range cc.freeBuf {
-		if len(buf) >= int(size) {
-			cc.freeBuf[i] = nil
-			cc.mu.Unlock()
-			return buf[:size]
-		}
-	}
 	cc.mu.Unlock()
-	return make([]byte, size)
+
+	buf := scratchPool.Get().([]byte)
+
+	return buf[:size]
 }
 
 func (cc *ClientConn) putFrameScratchBuffer(buf []byte) {
-	cc.mu.Lock()
-	defer cc.mu.Unlock()
-	const maxBufs = 4 // arbitrary; 4 concurrent requests per conn? investigate.
-	if len(cc.freeBuf) < maxBufs {
-		cc.freeBuf = append(cc.freeBuf, buf)
-		return
-	}
-	for i, old := range cc.freeBuf {
-		if old == nil {
-			cc.freeBuf[i] = buf
-			return
-		}
-	}
-	// forget about it.
+	scratchPool.Put(buf[:cap(buf)])
 }
 
 // errRequestCanceled is a copy of net/http's errRequestCanceled because it's not
